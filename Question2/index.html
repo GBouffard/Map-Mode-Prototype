@@ -9,14 +9,14 @@
     }
 
     #canvas {
-      width: 1024px;
-      height: 512px;
+      width: 768px;
+      height: 768px;
       border: 1px solid black;
     }
 
     #canvas .item {
-      height: 32px;
-      width: 32px;
+      height: 192px;
+      width: 192px;
       float:left; 
     }
   </style>
@@ -33,7 +33,7 @@
 //  https://s3.eu-central-1.amazonaws.com/kahootado-bananas/worldmap-2/worldmap+%5Bwww.imagesplitter.net%5D-ROW-COLUMN.png
 
 	(function() {
-	  var baseUrl = 'https://s3.eu-central-1.amazonaws.com/kahootado-bananas/worldmap-2/worldmap+%5Bwww.imagesplitter.net%5D-';
+	  var baseUrl = 'https://s3.eu-central-1.amazonaws.com/kahootado-bananas/johnkey/east-asia-oceania-map+%5Bwww.imagesplitter.net%5D-';
 	  
 	  var canvas = document.getElementById('canvas');
 	  var preview = document.getElementById('preview');
@@ -47,8 +47,8 @@
 	  function onTouchStart(event) {
 	    var x = event.touches[0].clientX;
 	    var y = event.touches[0].clientY;
-	    preview.style.left = x - 64 +'px';
-	    preview.style.top = y - 64 +'px';
+	    preview.style.left = x - 96 +'px';
+	    preview.style.top = y - 96 +'px';
 	      
 	    var element = event.target;
 	    var row = element.getAttribute("row");
@@ -63,11 +63,10 @@
 	  }
 	  
 	  function onTouchMove(e) {
-	  console.log(e);
 	      var x = e.touches[0].clientX;
 	      var y = e.touches[0].clientY;
-	            preview.style.left = x - 64 +'px';
-				preview.style.top = y -64 +'px';
+	            preview.style.left = x - 96 +'px';
+				preview.style.top = y - 96 +'px';
 	      var element = document.elementFromPoint(x, y);
 	      var row = element.getAttribute("row");
 	      
@@ -90,6 +89,8 @@
 	  function addItem(i, j) {
 	    var image = new Image();
 	    image.src = createUrlForCell(i, j);
+      image.style.width = '96px';
+      image.style.height = '96px';
 	    images[i][j] = image;    
 	        
 	    var touchpoint = document.createElement('div');
@@ -117,7 +118,7 @@
 	    }
 	  }
 	  
-	  preloadGrid(16, 32);
+	  preloadGrid(4, 4);
 	})();
 
   </script>
