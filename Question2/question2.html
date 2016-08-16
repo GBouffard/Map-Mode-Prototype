@@ -3,10 +3,6 @@
 <head>
   <title>  Map Mode Prototype Question 2 </title>
   <style>
-  .stop-scrolling {
-  height: 100%;
-  overflow: hidden;
-}
     #preview {
       position:absolute;
       z-index:-100;
@@ -25,7 +21,7 @@
     }
   </style>
 </head>
-<body class="stop-scrolling">
+<body>
   <div id="canvas">
   </div>
 
@@ -67,7 +63,6 @@
 	  }
 	  
 	  function onTouchMove(e) {
-      e.preventDefault();
 	      var x = e.touches[0].clientX;
 	      var y = e.touches[0].clientY;
 	            preview.style.left = x - 96 +'px';
