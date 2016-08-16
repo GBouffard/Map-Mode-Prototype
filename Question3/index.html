@@ -91,6 +91,8 @@
 	    var image = new Image();
 	    image.src = createUrlForCell(i, j);
 	    images[i][j] = image;    
+      image.style.width = '96px';
+      image.style.height = '96px';
 	        
 	    var touchpoint = document.createElement('div');
 	    touchpoint.className = 'item';
