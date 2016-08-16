@@ -20,6 +20,7 @@
       float:left; 
     }
   </style>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
 <body>
   <div id="canvas">
@@ -63,7 +64,7 @@
 	  }
 	  
 	  function onTouchMove(e) {
-	  console.log(e);
+	  e.preventDefault();
 	      var x = e.touches[0].clientX;
 	      var y = e.touches[0].clientY;
 	            preview.style.left = x - 48 +'px';
