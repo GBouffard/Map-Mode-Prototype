@@ -9,14 +9,14 @@
     }
 
     #canvas {
-      width: 1024px;
-      height: 512px;
+      width: 768px;
+      height: 768px;
       border: 1px solid black;
     }
 
     #canvas .item {
-      height: 32px;
-      width: 32px;
+      height: 96px;
+      width: 96px;
       float:left; 
     }
   </style>
@@ -33,7 +33,7 @@
 //  https://s3.eu-central-1.amazonaws.com/kahootado-bananas/worldmap-2/worldmap+%5Bwww.imagesplitter.net%5D-ROW-COLUMN.png
 
 	(function() {
-	  var baseUrl = 'https://s3.eu-central-1.amazonaws.com/kahootado-bananas/worldmap-2/worldmap+%5Bwww.imagesplitter.net%5D-';
+	  var baseUrl = 'https://s3.eu-central-1.amazonaws.com/kahootado-bananas/waldo/Pasted+image+at+2016_08_16+04_39+PM+%5Bwww.imagesplitter.net%5D-';
 	  
 	  var canvas = document.getElementById('canvas');
 	  var preview = document.getElementById('preview');
@@ -117,7 +117,7 @@
 	    }
 	  }
 	  
-	  preloadGrid(16, 32);
+	  preloadGrid(8, 8);
 	})();
 
   </script>
